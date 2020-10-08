@@ -1,6 +1,7 @@
 export default function preloadOne(url, done) {
 	const xhr = new XMLHttpRequest()
 	xhr.open('GET', url, true)
+	xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*')
 	xhr.responseType = 'blob'
 
 	const item = this.getItemByUrl(url)
